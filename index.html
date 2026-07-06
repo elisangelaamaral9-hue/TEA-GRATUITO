@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEA GRATUITO -  Um Espaço de Acolhimento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-icon">🧩</span>
+        <div class="brand-text">
+          <strong>TEA GRATUITO</strong>
+          <small>um espaço de cuidado</small>
+        </div>
+      </a>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#mapa">Mapa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="badge">Um lugar seguro e gentil para você</span>
+          <h1>Encontre apoio e compreensão</h1>
+          <p>Nossa missão é facilitar o acesso a serviços gratuitos e acolhedores para pessoas autistas e suas famílias em São Paulo. Você não está só.</p>
+          <div class="actions">
+            <a class="btn primary" href="#servicos">Ver serviços</a>
+            <a class="btn secondary" href="#mapa">Explorar mapa</a>
+          </div>
+        </div>
+        <div class="hero-card-soft reveal">
+          <div class="searchbox-organic">
+            <span>🔍</span>
+            <input id="searchInput" type="text" placeholder="Como podemos ajudar hoje?" />
+          </div>
+          <div class="mini-grid-organic">
+            <article><b>Acolhimento</b><span>Feito por quem entende as suas necessidades.</span></article>
+            <article><b>Proximidade</b><span>Serviços perto de você, com foco em SP.</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats container">
+      <article class="stat-bubble reveal"><strong data-target="0">0</strong><span>lugares de apoio</span></article>
+      <article class="stat-bubble reveal"><strong>SP</strong><span>Comunidade</span></article>
+      <article class="stat-bubble reveal"><strong>Gratuito</strong><span>Acesso livre</span></article>
+    </section>
+
+    <section id="sobre" class="container section">
+      <div class="reveal" style="background: var(--card); padding: 40px; border-radius: var(--radius-bubble); border: 1px solid var(--line);">
+        <small style="color: var(--pri); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Nossa Missão</small>
+        <h2 style="margin: 16px 0;">O que é o TEA Apoio SP?</h2>
+        <p style="max-width: 800px;">O TEA Apoio SP é uma iniciativa dedicada a mapear e divulgar serviços gratuitos e acolhedores para pessoas autistas em São Paulo. Acreditamos que o acesso à informação de qualidade é o primeiro passo para o cuidado e a inclusão. Nosso objetivo é conectar famílias a uma rede de apoio segura, humana e eficiente.</p>
+      </div>
+    </section>
+
+    <section id="servicos" class="container section">
+      <div class="section-head reveal">
+        <div><small>Cuidado próximo</small><h2>Instituições Parceiras</h2></div>
+        <div class="actions-header">
+          <span id="resultCount" class="pill-soft">Carregando...</span>
+        </div>
+      </div>
+
+      <div class="filters-organic reveal">
+        <div class="filters-search-row">
+          <div class="searchbox-organic large">
+            <span>🔎</span>
+            <input id="filterInput" type="text" placeholder="Busque por nome ou tipo de atendimento..." />
+          </div>
+        </div>
+
+        <div class="filters-toolbar">
+          <div class="quick-filters" role="group" aria-label="Filtros por categoria">
+            <button class="chip active" data-filter="">
+              <span class="chip-icon">✨</span>
+              <span class="chip-label">Todos</span>
+            </button>
+            <button class="chip" data-filter="Saúde">
+              <span class="chip-icon">🩺</span>
+              <span class="chip-label">Saúde</span>
+            </button>
+            <button class="chip" data-filter="ONG">
+              <span class="chip-icon">🤝</span>
+              <span class="chip-label">ONG</span>
+            </button>
+            <button class="chip" data-filter="Intervenção">
+              <span class="chip-icon">🧠</span>
+              <span class="chip-label">Intervenção</span>
+            </button>
+            <button class="chip" data-filter="Apoio Social">
+              <span class="chip-icon">💙</span>
+              <span class="chip-label">Apoio Social</span>
+            </button>
+          </div>
+          <button id="clearBtn" class="filter-reset-btn" type="button">
+            <span class="filter-reset-icon">↺</span>
+            <span>Limpar busca</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="results" class="cards-grid"></div>
+
+      <div id="emptyState" class="empty-organic reveal">
+        <div class="empty-icon">🧩</div>
+        <h3>Ainda estamos cultivando esta lista</h3>
+        <p>Não encontramos resultados para sua busca. Tente palavras mais simples ou explore todas as opções.</p>
+      </div>
+    </section>
+
+    <section id="sugerir" class="container section">
+      <div class="suggest-card-organic reveal" style="min-height: 82vh;">
+        <div class="suggest-info">
+          <small style="color: var(--sec); font-weight: 700; text-transform: uppercase;">Para Parceiros</small>
+          <h2>Cadastre sua Instituição</h2>
+          <div style="margin-top: 10px; padding: 18px 20px; background: var(--bg); border-radius: 20px; font-size: 0.9rem; color: var(--muted);">
+            <b>O que precisamos?</b><br>
+            Informações sobre seus serviços, horários e localização para que possamos direcionar as famílias corretamente.
+          </div>
+        </div>
+        <form id="suggestForm" class="suggest-form-organic" style="align-self: stretch;">
+          <input type="text" placeholder="Nome da Instituição" required />
+          <input type="text" placeholder="Serviços oferecidos (ex: Fono, TO, Psicologia)" required />
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <input type="text" placeholder="Horários de atendimento" required />
+            <input type="text" placeholder="Contato (Telefone/E-mail)" required />
+          </div>
+          <input type="text" placeholder="Endereço Completo" required />
+          <button type="submit" class="btn primary">Cadastrar Instituição</button>
+        </form>
+
+        <div style="grid-column: 1 / -1; margin-top: 20px; padding: 20px; border-radius: 20px; background: rgba(255,255,255,0.7); border: 1px dashed var(--line);">
+          <small style="color: var(--muted); text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">Sugestão rápida</small>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Se preferir, você também pode sugerir uma instituição enviando apenas o nome e a localização. Nós validaremos os demais dados depois.</p>
+          <div style="margin-top: 14px; display: grid; gap: 10px;">
+            <textarea placeholder="Digite aqui o nome da instituição e a localização" style="width: 100%; min-height: 110px; padding: 14px 16px; border-radius: 16px; border: 1px solid var(--line); font-family: var(--font-main); font-size: 0.95rem; resize: vertical; outline: none;"></textarea>
+            <button type="button" class="btn secondary" style="width: fit-content;">Enviar Sugestão</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="container section">
+      <div class="section-head reveal"><div><small>Dúvidas comuns</small><h2>Perguntas Frequentes</h2></div></div>
+      <div class="faq-list reveal">
+        <details class="faq-item"><summary>Como faço para conseguir atendimento?</summary><p>Use a busca, filtre por categoria e veja as instituições mais próximas. Depois, entre em contato pelo telefone ou e-mail informado.</p></details>
+        <details class="faq-item"><summary>As instituições são gratuitas?</summary><p>A página prioriza serviços gratuitos ou de baixo custo. Sempre recomendamos confirmar as condições diretamente com cada instituição.</p></details>
+        <details class="faq-item"><summary>Como sugerir uma instituição?</summary><p>Você pode usar a área de cadastro ou a sugestão rápida no final da página para enviar nome, localização e informações iniciais.</p></details>
+      </div>
+    </section>
+
+    <section id="mapa" class="container section">
+      <div class="map-card-organic reveal">
+        <div class="map-text">
+          <small>Localização</small>
+          <h2>Mapa de Acolhimento</h2>
+          <p>Visualize visualmente onde encontrar suporte na cidade de São Paulo.</p>
+        </div>
+        <div class="map-placeholder-organic">📍 Ver no Mapa</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-soft" style="text-align:center; padding: 24px 0 40px; color: var(--muted); font-size: 0.95rem;">
+    Desenvolvido por Nick CodeTech - 2026
+  </footer>
+  <button id="toTop" class="to-top-soft" aria-label="Voltar ao topo">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
