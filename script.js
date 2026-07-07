@@ -47,6 +47,8 @@ if (accessibilityBtn && accessibilityPanel) {
 
     accessibilityBtn.addEventListener("click", () => {
         accessibilityPanel.classList.toggle("active");
+        const isOpen = accessibilityPanel.classList.contains("active");
+        accessibilityBtn.setAttribute("aria-expanded", isOpen);
     });
 
     document.addEventListener("click", (e) => {
@@ -56,6 +58,7 @@ if (accessibilityBtn && accessibilityPanel) {
             !accessibilityBtn.contains(e.target)
         ) {
             accessibilityPanel.classList.remove("active");
+            accessibilityBtn.setAttribute("aria-expanded", "false");
         }
 
     });
