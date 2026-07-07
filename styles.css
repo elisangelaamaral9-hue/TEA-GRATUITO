@@ -529,3 +529,102 @@ body.reading .hero {
 body.reading img {
   filter: saturate(0.8);
 }
+
+/* Responsividade geral */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, iframe, video {
+  max-width: 100%;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  header,
+  .hero,
+  .content-grid,
+  .cards,
+  .results-panel,
+  .map-panel,
+  footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .results-panel,
+  .map-panel {
+    width: 100%;
+  }
+
+  #map {
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+  }
+
+  .cards,
+  .features,
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card,
+  article {
+    width: 100%;
+  }
+
+  .search-box,
+  .filters {
+    width: 100%;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
+    padding: 24px 16px;
+  }
+
+  .footer-content,
+  .footer-links,
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
