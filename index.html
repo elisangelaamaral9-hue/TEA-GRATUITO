@@ -10,34 +10,35 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="./styles.css">
 </head>
+<body>
   <div class="accessibility-menu">
-    <button id="accessibilityBtn">♿ Acessibilidade</button>
+    <button id="accessibilityBtn" aria-label="Menu de acessibilidade" aria-expanded="false" aria-controls="accessibilityPanel">♿ Acessibilidade</button>
 
-    <div id="accessibilityPanel" class="accessibility-panel">
+    <div id="accessibilityPanel" class="accessibility-panel" role="region" aria-label="Painel de acessibilidade">
 
-        <button id="darkMode">
+        <button id="darkMode" aria-label="Ativar/desativar modo escuro">
             🌙 Modo Escuro
         </button>
 
-        <button id="increaseFont">
+        <button id="increaseFont" aria-label="Aumentar tamanho da fonte">
             🔤 Aumentar Fonte
         </button>
 
-        <button id="decreaseFont">
+        <button id="decreaseFont" aria-label="Diminuir tamanho da fonte">
             🔡 Diminuir Fonte
         </button>
 
-        <button id="readingMode">
+        <button id="readingMode" aria-label="Ativar/desativar modo leitura">
             📖 Modo Leitura
         </button>
 
-        <button id="contrastMode">
+        <button id="contrastMode" aria-label="Ativar/desativar alto contraste">
             🎨 Alto Contraste
         </button>
 
     </div>
-</div>
-<body>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <a class="brand" href="#">
@@ -91,7 +92,7 @@
       <div class="reveal" style="background: var(--card); padding: 40px; border-radius: var(--radius-bubble); border: 1px solid var(--line);">
         <small style="color: var(--pri); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Nossa Missão</small>
         <h2 style="margin: 16px 0;">O que é o TEA GRATUITO?</h2>
-        <p style="max-width: 800px;">O TEA GRATUITO é uma iniciativa dedicada a mapear e divulgar serviços gratuitos e acolhedores para pessoas autistas em São Paulo. Acreditamos que o acesso à informação de qualidade é o primeiro passo para o cuidado e a inclusão. Nosso objetivo é conectar famílias a uma rede de apoio segura, humana e eficiente.</p>
+        <p style="max-width: 800px;">O TEA GRATUITO é uma iniciativa dedicada a mapear e divulgar serviços gratuitos e acolhedores para pessoas autistas em São Paulo. Acreditamos que o acesso a informações qualificadas e o apoio comunitário são fundamentais para a inclusão e o bem-estar.</p>
       </div>
     </section>
 
@@ -175,7 +176,7 @@
           <small style="color: var(--muted); text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">Sugestão rápida</small>
           <p style="margin-top: 8px; font-size: 0.95rem;">Se preferir, você também pode sugerir uma instituição enviando apenas o nome e a localização. Nós validaremos os demais dados depois.</p>
           <div style="margin-top: 14px; display: grid; gap: 10px;">
-            <textarea placeholder="Digite aqui o nome da instituição e a localização" style="width: 100%; min-height: 110px; padding: 14px 16px; border-radius: 16px; border: 1px solid var(--line); font-family: var(--font-main); font-size: 0.95rem; resize: vertical; outline: none;"></textarea>
+            <textarea placeholder="Digite aqui o nome da instituição e a localização" style="width: 100%; min-height: 110px; padding: 14px 16px; border-radius: 16px; border: 1px solid var(--line); font-family: var(--font-main); color: var(--text); background: var(--card); resize: vertical;"></textarea>
             <button type="button" class="btn secondary" style="width: fit-content;">Enviar Sugestão</button>
           </div>
         </div>
@@ -183,49 +184,50 @@
     </section>
 
     <section id="faq" class="container section">
-  <div class="section-head reveal">
-    <div>
-      <small>Dúvidas comuns</small>
-      <h2>Perguntas Frequentes</h2>
-    </div>
-  </div>
+      <div class="section-head reveal">
+        <div>
+          <small>Dúvidas comuns</small>
+          <h2>Perguntas Frequentes</h2>
+        </div>
+      </div>
 
-  <div class="faq-list reveal">
-    <details class="faq-item">
-      <summary>Como faço para conseguir atendimento?</summary>
-      <p>Use a busca, filtre por categoria e veja as instituições mais próximas. Depois, entre em contato pelo telefone ou e-mail informado.</p>
-    </details>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>Como faço para conseguir atendimento?</summary>
+          <p>Use a busca, filtre por categoria e veja as instituições mais próximas. Depois, entre em contato pelo telefone ou e-mail informado.</p>
+        </details>
 
-    <details class="faq-item">
-      <summary>As instituições são gratuitas?</summary>
-      <p>A página prioriza serviços gratuitos ou de baixo custo. Sempre recomendamos confirmar as condições diretamente com cada instituição.</p>
-    </details>
+        <details class="faq-item">
+          <summary>As instituições são gratuitas?</summary>
+          <p>A página prioriza serviços gratuitos ou de baixo custo. Sempre recomendamos confirmar as condições diretamente com cada instituição.</p>
+        </details>
 
-    <details class="faq-item">
-      <summary>Como sugerir uma instituição?</summary>
-      <p>Você pode usar a área de cadastro ou a sugestão rápida para enviar nome, localização e informações iniciais.</p>
-    </details>
-  </div>
-</section>
+        <details class="faq-item">
+          <summary>Como sugerir uma instituição?</summary>
+          <p>Você pode usar a área de cadastro ou a sugestão rápida para enviar nome, localização e informações iniciais.</p>
+        </details>
+      </div>
+    </section>
 
-<section id="mapa" class="container section">
-  <div class="map-card-organic reveal">
-    <div class="map-text">
-      <small>Mapa</small>
-      <h2>Atendimentos em SP</h2>
-    </div>
+    <section id="mapa" class="container section">
+      <div class="map-card-organic reveal">
+        <div class="map-text">
+          <small>Mapa</small>
+          <h2>Atendimentos em SP</h2>
+        </div>
 
-    <div id="map"></div>
-  </div>
-</section>
+        <div id="map"></div>
+      </div>
+    </section>
 
-<footer class="footer-soft">
-  <strong>Desenvolvido por © 2026 Nick CodeTech</strong>
-</footer>
+    <footer class="footer-soft">
+      <strong>Desenvolvido por © 2026 Nick CodeTech</strong>
+    </footer>
+  </main>
 
-<button id="toTop" class="to-top-soft" aria-label="Voltar ao topo">↑</button>
+  <button id="toTop" class="to-top-soft" aria-label="Voltar ao topo">↑</button>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
