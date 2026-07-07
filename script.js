@@ -169,18 +169,6 @@ if (darkMode) {
 
 }
 
-if (contrastMode) {
-
-    contrastMode.addEventListener("click", () => {
-
-        body.classList.toggle("contrast");
-
-        salvarPreferencias();
-
-    });
-
-}
-
 if (readingMode) {
 
     readingMode.addEventListener("click", () => {
@@ -201,7 +189,14 @@ function render(list = data) {
       <span class="tag-soft">${item.tag}</span>
       <h3>${item.nome}</h3>
       <p>${item.descricao}</p>
-      <button class="btn-text" style="margin-top:auto; align-self: flex-start;">Ver mais detalhes</button>
+      <button class="btn-text" style="margin-top:auto; align-self: flex-start;"><a 
+                href="${item.link}" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="details-link"
+              >
+                Ver mais detalhes
+        </a></button>
     </article>`).join('');
   
   resultCount.textContent = `${list.length} ${list.length === 1 ? 'resultado encontrado' : 'resultados encontrados'}`;
