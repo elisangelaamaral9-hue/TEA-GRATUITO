@@ -374,15 +374,43 @@ p { color: var(--muted); font-size: 1.15rem; max-width: 540px; }
 .empty-icon { font-size: 3rem; margin-bottom: 20px; opacity: 0.5; }
 
 /* Utilities */
-.to-top-soft { 
-  position: fixed; right: 40px; bottom: 40px; width: 60px; height: 60px; border-radius: 50%; 
-  background: var(--pri); color: #fff; display: grid; place-items: center; cursor: pointer; 
-  opacity: 0; transition: 0.5s; border: none; box-shadow: 0 10px 30px rgba(93, 167, 219, 0.3); font-size: 1.5rem;
+.to-top-soft, #toTop { 
+  position: fixed; 
+  right: 40px; 
+  bottom: 40px; 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  background: var(--pri); 
+  color: #fff; 
+  display: grid; 
+  place-items: center; 
+  cursor: pointer; 
+  opacity: 0; 
+  visibility: hidden; 
+  transition: 0.5s; 
+  border: none; 
+  box-shadow: 0 10px 30px rgba(93, 167, 219, 0.3); 
+  font-size: 1.5rem;
+  z-index: 9999; 
 }
-.to-top-soft.show { opacity: 1; }
 
-.reveal { opacity: 0; transform: translateY(30px); transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.to-top-soft.show, #toTop.show { 
+  opacity: 1; 
+  visibility: visible;
+}
+
+.reveal { 
+  opacity: 0; 
+  transform: translateY(30px); 
+  transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); 
+}
+
+.reveal.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
 
 /* FAQ Items */
 .faq-list { display: grid; gap: 16px; }
