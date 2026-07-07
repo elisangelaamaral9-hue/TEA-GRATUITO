@@ -163,23 +163,53 @@
       </div>
     </section>
 
-<section id="mapa" class="container section">
-  <div class="map-card-organic reveal">
-    <div class="map-text">
-      <small>Localização</small>
-      <h2>Mapa de Acolhimento</h2>
-      <p>Veja os pontos de apoio disponíveis na cidade de São Paulo.</p>
-    </div>
-    <a class="map-placeholder-organic" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
-      📍 Ver no Mapa
-    </a>
-  </div>
-</section>
+      <article>
+        <span>📍</span>
+        <h2>Localização</h2>
+        <p>Visualize instituições e serviços disponíveis no mapa interativo.</p>
+      </article>
 
-</main>
+      <article>
+        <span>🔎</span>
+        <h2>Busca simples</h2>
+        <p>Filtre rapidamente por nome, endereço, atendimento ou palavra-chave.</p>
+      </article>
+    </section>
 
-<footer class="footer-soft">
-  <p style="text-align:center; padding: 24px 0 40px; color: var(--muted); font-size: 0.95rem;">
-    © 2026 • Nick CodeTech
+    <section id="buscar" class="content-grid">
+      <div class="results-panel">
+        <div class="section-title">
+          <div>
+            <p>Resultados</p>
+            <h2>Instituições encontradas</h2>
+          </div>
+
+          <span id="resultCount">0 resultados</span>
+        </div>
+
+        <div id="cardsContainer" class="cards-container"></div>
+      </div>
+      <aside id="mapa" class="map-panel">
+        <div class="section-title">
+          <div>
+            <p>Mapa</p>
+            <h2>Atendimentos em SP</h2>
+          </div>
+        </div>
+
+        <div id="map"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <strong>TEA Apoio SP</strong>
+    <p>Projeto desenvolvido por Elisangela Amaral</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
   </p>
 </footer>
