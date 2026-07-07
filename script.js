@@ -25,6 +25,173 @@ function updateActiveChip(value = '') {
   });
 }
 
+/* ===========================
+   ACESSIBILIDADE
+=========================== */
+
+const body = document.body;
+
+const accessibilityBtn = document.getElementById("accessibilityBtn");
+const accessibilityPanel = document.getElementById("accessibilityPanel");
+
+const darkMode = document.getElementById("darkMode");
+const contrastMode = document.getElementById("contrastMode");
+const readingMode = document.getElementById("readingMode");
+
+const increaseFont = document.getElementById("increaseFont");
+const decreaseFont = document.getElementById("decreaseFont");
+
+/* ---------- Menu ---------- */
+
+if (accessibilityBtn && accessibilityPanel) {
+
+    accessibilityBtn.addEventListener("click", () => {
+        accessibilityPanel.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (e) => {
+
+        if (
+            !accessibilityPanel.contains(e.target) &&
+            !accessibilityBtn.contains(e.target)
+        ) {
+            accessibilityPanel.classList.remove("active");
+        }
+
+    });
+
+}
+
+/* ---------- Fonte ---------- */
+
+let fontSize = Number(localStorage.getItem("fontSize")) || 100;
+
+document.documentElement.style.fontSize = fontSize + "%";
+
+function salvarFonte() {
+    localStorage.setItem("fontSize", fontSize);
+}
+
+if (increaseFont) {
+
+    increaseFont.addEventListener("click", () => {
+
+        if (fontSize < 140) {
+
+            fontSize += 10;
+
+            document.documentElement.style.fontSize = fontSize + "%";
+
+            salvarFonte();
+
+        }
+
+    });
+
+}
+
+if (decreaseFont) {
+
+    decreaseFont.addEventListener("click", () => {
+
+        if (fontSize > 80) {
+
+            fontSize -= 10;
+
+            document.documentElement.style.fontSize = fontSize + "%";
+
+            salvarFonte();
+
+        }
+
+    });
+
+}
+
+/* ---------- Classes ---------- */
+
+function salvarPreferencias() {
+
+    const preferencias = {
+        dark: body.classList.contains("dark"),
+        contrast: body.classList.contains("contrast"),
+        reading: body.classList.contains("reading"),
+        fontSize
+    };
+
+    localStorage.setItem(
+        "teaPreferencias",
+        JSON.stringify(preferencias)
+    );
+
+}
+
+function carregarPreferencias() {
+
+    const preferencias = JSON.parse(
+        localStorage.getItem("teaPreferencias")
+    );
+
+    if (!preferencias) return;
+
+    if (preferencias.dark)
+        body.classList.add("dark");
+
+    if (preferencias.contrast)
+        body.classList.add("contrast");
+
+    if (preferencias.reading)
+        body.classList.add("reading");
+
+    if (preferencias.fontSize) {
+
+        fontSize = preferencias.fontSize;
+
+        document.documentElement.style.fontSize =
+            fontSize + "%";
+
+    }
+
+}
+
+if (darkMode) {
+
+    darkMode.addEventListener("click", () => {
+
+        body.classList.toggle("dark");
+
+        salvarPreferencias();
+
+    });
+
+}
+
+if (contrastMode) {
+
+    contrastMode.addEventListener("click", () => {
+
+        body.classList.toggle("contrast");
+
+        salvarPreferencias();
+
+    });
+
+}
+
+if (readingMode) {
+
+    readingMode.addEventListener("click", () => {
+
+        body.classList.toggle("reading");
+
+        salvarPreferencias();
+
+    });
+
+}
+
+carregarPreferencias();
+
 function render(list = data) {
   resultsContainer.innerHTML = list.map(item => `
     <article class="card">
