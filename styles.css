@@ -336,3 +336,99 @@ p { color: var(--muted); font-size: 1.15rem; max-width: 540px; }
   color: var(--text);
   margin-bottom: 8px;
 }
+
+/* ===========================
+   MODO ESCURO
+=========================== */
+
+body.dark{
+
+    --bg:#101114;
+    --card:#1C1F26;
+    --text:#F5F7FA;
+    --muted:#BFC7D5;
+    --line:#31343C;
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+body.dark .card,
+body.dark .hero,
+body.dark .header,
+body.dark .map-card-organic,
+body.dark .suggest-card-organic{
+
+    background:var(--card);
+
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3{
+
+    color:var(--text);
+
+}
+
+/* ===========================
+   ALTO CONTRASTE
+=========================== */
+
+body.contrast{
+
+    background:#000;
+    color:#FFF;
+
+}
+
+body.contrast *{
+
+    color:#FFF !important;
+
+}
+
+body.contrast a{
+
+    color:#FFD700 !important;
+
+}
+
+body.contrast .card{
+
+    background:#111;
+
+    border:2px solid #FFF;
+
+}
+
+/* ===========================
+   MODO LEITURA
+=========================== */
+
+body.reading{
+
+    line-height:2;
+
+    letter-spacing:.4px;
+
+}
+
+body.reading p{
+
+    max-width:900px;
+
+}
+
+body.reading .hero{
+
+    padding-top:120px;
+
+}
+
+body.reading img{
+
+    filter:saturate(.8);
+
+}
