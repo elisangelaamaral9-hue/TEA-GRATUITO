@@ -129,3 +129,24 @@ toTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 // Init
 render();
 updateActiveChip(activeCategory);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mapElement = document.getElementById("map");
+
+  if (mapElement && typeof L !== "undefined") {
+    const map = L.map("map").setView([-23.55052, -46.633308], 11);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap"
+    }).addTo(map);
+
+    L.marker([-23.55052, -46.633308])
+      .addTo(map)
+      .bindPopup("<strong>São Paulo - SP</strong><br>Área de atendimento TEA Gratuito")
+      .openPopup();
+
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 300);
+  }
+});
