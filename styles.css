@@ -40,6 +40,12 @@ body::before {
   animation: puzzleFloat 8s ease-in-out infinite;
 }
 
+/* Keyframe para animação do puzzle */
+@keyframes puzzleFloat {
+  0%, 100% { transform: rotate(-12deg) translateY(0); }
+  50% { transform: rotate(-12deg) translateY(-20px); }
+}
+
 .container { width: min(1080px, calc(100% - 60px)); margin: auto; }
 
 /* Header Acolhedor */
@@ -255,7 +261,7 @@ p { color: var(--muted); font-size: 1.15rem; max-width: 540px; }
 
 .map-card-organic { background: var(--pri); padding: 50px; border-radius: 40px; display: flex; justify-content: space-between; align-items: center; color: #fff; }
 .map-text h2, .map-text p { color: #fff; }
-.map-placeholder-organic { width: 240px; height: 160px; background: #fff; border-radius: 30px; display: grid; place-items: center; font-weight: 700; font-family: var(--font-title); font-size: 1.2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); color: var(--pri); }
+.map-placeholder-organic { width: 240px; height: 160px; background: #fff; border-radius: 30px; display: grid; place-items: center; font-weight: 700; font-family: var(--font-title); font-size: 1.2rem; color: var(--text); }
 
 /* Empty State */
 .empty-organic { text-align: center; padding: 80px 20px; background: #fff; border-radius: var(--radius-bubble); margin-top: 40px; border: 1px dashed var(--muted); }
@@ -309,7 +315,7 @@ p { color: var(--muted); font-size: 1.15rem; max-width: 540px; }
   padding: 34px;
   border-radius: var(--radius-bubble);
   border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
 }
 
 #map {
