@@ -86,7 +86,7 @@
   {
     "id": 8,
     "nome": "Specialisterne Brasil",
-    "categoria": "Empregabilidade",
+    "categoria": "ONG",
     "gratuito": true,
     "descricao": "Promove programas gratuitos de capacitação e inclusão profissional para pessoas neurodivergentes, incluindo pessoas autistas.",
     "contato": "Inscrições e informações disponíveis no site oficial.",
@@ -123,7 +123,7 @@
   {
     "id": 11,
     "nome": "ABADS - Associação Brasileira de Assistência e Desenvolvimento Social",
-    "categoria": "Apoio Social",
+    "categoria": "ONG",
     "gratuito": true,
     "descricao": "A Instituição completou 70 anos e não tem fins lucrativos. Se dedica ao atendimento gratuito de pessoas com deficiência intelectual e Transtorno do Espectro Autista (TEA)",
     "contato": "(11) 2905-3045",
