@@ -106,5 +106,30 @@
     "link": "https://prefeitura.sp.gov.br/web/pessoa_com_deficiencia/centro_tea",
     "lat": -23.5415,
     "lng": -46.5771
+    },
+  {
+    "id": 10,
+    "nome": "Centro Municipal para Pessoas com TEA (Santana)",
+    "categoria": "Centro de Atendimento",
+    "gratuito": true,
+    "descricao": "Centro municipal voltado ao atendimento multidisciplinar de crianças, jovens, adultos e idosos com Transtorno do Espectro Autista.",
+    "contato": "Consulte os canais oficiais da Prefeitura de São Paulo para informações sobre acesso ao serviço.",
+    "endereco": "Santana - São Paulo - SP",
+    "link": "https://www.instagram.com/centroteazn/",
+    "lat": -23.51862,
+    "lng": -46.63183
+      
+  },
+  {
+    "id": 11,
+    "nome": "ABADS - Associação Brasileira de Assistência e Desenvolvimento Social",
+    "categoria": "Apoio Social",
+    "gratuito": true,
+    "descricao": "A Instituição completou 70 anos e não tem fins lucrativos. Se dedica ao atendimento gratuito de pessoas com deficiência intelectual e Transtorno do Espectro Autista (TEA)",
+    "contato": "(11) 2905-3045",
+    "endereco": "Vila Guilherme, São Paulo - SP",
+    "link": "https://www.abads.org.br/",
+    "lat": -23.515738,
+    "lng": -46.606480
   }
 ]
