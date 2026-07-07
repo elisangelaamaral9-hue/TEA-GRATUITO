@@ -54,7 +54,10 @@ Além do impacto social, o projeto demonstra conhecimentos em desenvolvimento Fr
 - CSS3
 - JavaScript (ES6)
 - JSON
-
+- GitHub Pages
+- Lumina (Grupo Alun)
+- ChatGPT
+- GitHub Copilot
 ---
 
 ## 📂 Estrutura do projeto
